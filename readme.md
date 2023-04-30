@@ -3,6 +3,8 @@
 The demo of the application can be viewed in below url
 https://drive.google.com/file/d/1tWDyg-mG1oFL2P6sfg9leYuffEPAJgVq/view?usp=sharing
 
+FrontEnd Hosted on: https://event-hub-frontend-j9v9-d84jv5f3d-himanshuvarandani.vercel.app/
+
 Backend hosted on: https://eventhub-backend.onrender.com
 
-Dockerization complete. Frontend Deployment couldn'd complete in time.
+Dockerization complete.
