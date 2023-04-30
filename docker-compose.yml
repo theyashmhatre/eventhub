@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  frontend-service:
+    container_name: eventhub-frontend
+    image: yashmhatre/frontend
+    build:
+      context: ./EventHub-Frontend
+    volumes:
+      - ./EventHub-Frontend:/usr/src/app
+    ports:
+      - 3000:3000
+  mysqldb-service:
+    image: mysql:5.7
+    restart: unless-stopped
+    env_file: ./eventhub-backend/.env
+    environment:
+      - MYSQL_HOST=$MYSQL_HOST
+      - dbPassword=$dbPassword
+      - MYSQL_ROOT_PASSWORD=root
+    stdin_open: true
+    tty: true
+  backend-service:
+    depends_on:
+      - mysqldb-service
+    container_name: eventhub-backend
+    image: yashmhatre/backend
+    build:
+      context: ./eventhub-backend
+    volumes:
+      - ./eventhub-backend:/usr/src/app
+    ports:
+      - 8000:8000

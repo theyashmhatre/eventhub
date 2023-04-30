@@ -1,0 +1,10 @@
+import Footer from '../components/Footer'
+import Header from '../components/Header'
+
+const CreateEvent = () => {
+  return (
+    <div>
+      <Header />
+      +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+      
+      
